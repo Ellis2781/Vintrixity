@@ -6,3 +6,6 @@ build:
 
 install:
 	cp hello-world ${PREFIX}/bin
+
+clean:
+	rm hello-world
