@@ -2,7 +2,7 @@
 
 Status: Very Early Alpha, experimental
 
-Vintrixity is an open source, linux based operating system that attempts to be as simple as possible in implementation. 
+Vintrixity is an open source, linux based operating system that attempts to be as simple, clean, and efficient as possible.
 
 My inspiration for designing this os stemmed from the BSD vs linux dilemma. BSD-like oses just have a level of simplicity that makes life so much easier. BSD has every single thing packaged into a nice neat bundle of software. Also, I particularly like the style of BSD config files. 
 
