@@ -2,36 +2,36 @@
 # These variables are meant to be used throughout the entire project
 # This file is meant to be included from a directory above this one.
 
-PROJECT_ROOT_DIR := $(CURDIR)/../../
+PROJECT_ROOT_DIR := $(CURDIR)/../
 # This is the root directory of our build, by default this is located in the directory that this file is in
 
-SRC_DIR := $(CURDIR)/../../src/
+SRC_DIR := $(CURDIR)/../src/
 # The root of our source directory, by default this is located in the root directory
 
-BUILD_DIR := $(CURDIR)/../../build/
+BUILD_DIR := $(CURDIR)/../build/
 # The root of our build directory, by default it is in the root directory
 
-SYSROOT_DIR := $(CURDIR)/../../build/sysroot/
+SYSROOT_DIR := $(CURDIR)/../build/sysroot/
 # This is the sysroot of the build, located in the build directory
 
-BOOT_DIR := $(CURDIR)/../../build/boot/
+BOOT_DIR := $(CURDIR)/../build/boot/
 # This is the boot partition of the build, located in the build directory as well
 
 SYSTEM_DIR := $(SYSROOT_DIR)/System/
 # This is the /System directory of the build, located in the sysroot directory
 
 ###################################################
-Here are some flags to help the reduce repetition
+#Here are some flags to help the reduce repetition
 ###################################################
 
 #DEFAULT_CFLAGS
 DEFAULT_CFLAGS := "--sysroot=$(SYSROOT_DIR) -I$(SYSROOT_DIR)/usr/include"
 
 # DEFAULT CONFIGURE FLAGS
-DEFAULT_CONFIGURE_FLAGS := --prefix=$(SYSTEM_DIR) --includedir=SYSROOT_DIR/usr/include CFLAGS=$(DEFAULT_CFLAGS) --includedir=$(SYSROOT_DIR)/usr/include --libdir=$(SYSROOT_DIR)/usr/lib --libdir=$(SYSTEM_DIR)/lib
+DEFAULT_CONFIGURE_FLAGS := "--prefix=$(SYSTEM_DIR) --includedir=SYSROOT_DIR/usr/include CFLAGS=$(DEFAULT_CFLAGS) --includedir=$(SYSROOT_DIR)/usr/include --libdir=$(SYSROOT_DIR)/usr/lib --libdir=$(SYSTEM_DIR)/lib"
 
 # These flags are general flags, they are used in some makefiles but since they are simply variables, they may be applied to anywhere that needs these variables
-DEFAULT_GENERIC_CC_FLAGS := CFLAGS=$(DEFAULT_CFLAGS) CC=clang
+DEFAULT_GENERIC_CC_FLAGS := "CFLAGS=$(DEFAULT_CFLAGS) CC=clang"
 
 # Gets a list of all directories that include a vintrixity.mk file and then builds all of them 
 DIRS := $(wildcard */)

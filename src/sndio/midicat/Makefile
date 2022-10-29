@@ -19,8 +19,8 @@ CFLAGS=-static -fPIE -pie -Wall
 # binaries, documentation, man pages and examples will be installed in 
 # ${BIN_DIR}, ${MAN1_DIR}
 #
-BIN_DIR = /home/kc/Vintrixity/Vintrixity/src/../../build/sysroot//System//sbin
-MAN1_DIR = /home/kc/Vintrixity/Vintrixity/src/../../build/sysroot//System//share/man/man1
+BIN_DIR = /home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//sbin
+MAN1_DIR = /home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//share/man/man1
 
 #
 # programs to build

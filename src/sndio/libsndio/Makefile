@@ -24,11 +24,11 @@ CFLAGS=-static -fPIE -pie -Wall
 #
 # headers, libraries and man pages installation paths
 #
-INCLUDE_DIR = /home/kc/Vintrixity/Vintrixity/src/../../build/sysroot//System//include
-LIB_DIR = /home/kc/Vintrixity/Vintrixity/src/../../build/sysroot//System//lib
-PKGCONF_DIR = /home/kc/Vintrixity/Vintrixity/src/../../build/sysroot//System//lib/pkgconfig
-MAN3_DIR = /home/kc/Vintrixity/Vintrixity/src/../../build/sysroot//System//share/man/man3
-MAN7_DIR = /home/kc/Vintrixity/Vintrixity/src/../../build/sysroot//System//share/man/man7
+INCLUDE_DIR = /home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//include
+LIB_DIR = /home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//lib
+PKGCONF_DIR = /home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//lib/pkgconfig
+MAN3_DIR = /home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//share/man/man3
+MAN7_DIR = /home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//share/man/man7
 
 # man3 and man7 pages
 MAN3 = \
