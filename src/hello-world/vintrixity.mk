@@ -9,8 +9,7 @@ all:
 	@echo Using System Directory: $(SYSTEM_DIR)
 
 	@echo Running make
-	make $(DEFAULT_CFLAGS)
+	make $(DEFAULT_CFLAGS) -j$(JOBS)
 
-	@
 	make install PREFIX=$(SYSTEM_DIR)
 	

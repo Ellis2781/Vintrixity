@@ -1,0 +1,9 @@
+# Soft dependencies extracted from modules themselves.
+softdep btrfs pre: blake2b-256
+softdep btrfs pre: sha256
+softdep btrfs pre: xxhash64
+softdep btrfs pre: crc32c
+softdep f2fs pre: crc32
+softdep vfio post: vfio_iommu_type1 vfio_iommu_spapr_tce
+softdep xt_LOG pre: nf_log_syslog
+softdep libcrc32c pre: crc32c

@@ -1,0 +1,24 @@
+To build this project, simply type make in the root directory of this project. 
+
+If you would like to add your own project to the build, add a folder to the src directory containing your program and a vintrixity.mk file. A vintrixity.mk file is just a makefile that is used to build the your project. Here is a simple vintrixity.mk.
+
+vintrixity.mk
+```
+all:
+	$(DEFAULT_CC) main.c -o hello-world $(DEFAULT_CFLAGS)
+	cp hello-world $(SYSTEM_DIR)/bin
+```
+
+There are different variables that you can use to specify which path you want to use. 
+SYSTEM_DIR = /System
+PROJECT_ROOT_DIR = The root of this repo
+SRC_DIR = The source directory
+BUILD_DIR = The build directory
+SYSROOT_DIR = /
+BOOT_DIR = The boot partition, this will get mounted to /System/boot
+DEFAULT_CC = The default c compiler is gcc however, it can be changed
+DEFAULT_CFLAGS = The compiler flags that are typically used to build programs
+DEFAULT_CONFIGURE_FLAGS = The configure flags that are typically used to configure programs with a configure script
+DEFAULT_GENERIC_CC_FLAGS = DEFAULT_CFLAGS + DEFAULT_CC
+
+To use these, just type $(VARNAME) with one of these variables replacing VARNAME.

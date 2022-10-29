@@ -1,0 +1,4 @@
+#!/sbin/sh
+
+mkmodule-list /etc/modules
+modprobe

@@ -1,6 +1,6 @@
 # Vintrixity
 
-Status: Very Early Alpha, experimental
+Status: Very Early Alpha, experimental, the build system should be somewhat working
 
 Vintrixity is an open source, linux based operating system that attempts to be as simple, clean, and efficient as possible.
 
@@ -11,8 +11,6 @@ My future plans are: porting the linux kernel to run atop the seL4 microkernel (
 Ideas/Inspirations
 	- Adding a tool to manage all of the system related utilities 
 	- The /System directoy is an inspiration from Apple's popular OS, Mac OS. Having all system related utilities in a single directory rather than having them spread throughout the entire system sounded appropriate.
-
-
 
 Compiling software can be a nightmare!
 Stay tuned!
