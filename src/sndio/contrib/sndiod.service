@@ -6,7 +6,7 @@ After=network.target
 Type=forking
 Restart=on-abort
 EnvironmentFile=-/etc/default/sndiod
-ExecStart=/home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//sbin/sndiod $DAEMON_OPTS
+ExecStart=/home/kc/Vintrixity/Vintrixity//build/sysroot/System//bin/sndiod $DAEMON_OPTS
 
 [Install]
 WantedBy=multi-user.target

@@ -1,7 +1,6 @@
-include ../Makefile
 all:
-	make
-	./busybox --install $(SYSTEM_DIR)/sbin
+	make -j$(JOBS) CFLAGS=$(DEFAULT_CFLAGS) CC=$(DEFAULT_CC)
+	./busybox --install $(SYSTEM_DIR)/sbin 
 
 	#cd kconfig-frontends && ./configure $(DEFAULT_CONFIGURE_FLAGS) && make CFLAGS=$(DEFAULT_CFLAGS) && make CFLAGS=$(DEFAULT_CFLAGS) install 
 

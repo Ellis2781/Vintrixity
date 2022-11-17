@@ -12,7 +12,7 @@
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC="sndio audio and MIDI server"
 NAME="sndiod"
-DAEMON=/home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//sbin/sndiod
+DAEMON=/home/kc/Vintrixity/Vintrixity//build/sysroot/System//bin/sndiod
 DAEMON_OPTS=""
 SCRIPTNAME=/etc/init.d/$NAME
 

@@ -1,4 +1,4 @@
-prefix=/home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System/
+prefix=/home/kc/Vintrixity/Vintrixity//build/sysroot/System/
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

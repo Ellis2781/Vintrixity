@@ -17,18 +17,17 @@ SO_CFLAGS = -fPIC
 SO_LDFLAGS = -shared -Wl,-soname=libsndio.so.${MAJ}
 
 # variables defined on configure script command line (if any)
-CC=clang
-CFLAGS=-static -fPIE -pie -Wall
+CFLAGS=--sysroot=/home/kc/Vintrixity/Vintrixity//build/sysroot -I/home/kc/Vintrixity/Vintrixity//build/sysroot/usr/include -I/home/kc/Vintrixity/Vintrixity//build/kernel_headers/include -I/include -L/home/kc/Vintrixity/Vintrixity//build/sysroot/usr/lib -L/home/kc/Vintrixity/Vintrixity//build/sysroot/usr/lib64 -L/home/kc/Vintrixity/Vintrixity//build/sysroot/System//lib -L/home/kc/Vintrixity/Vintrixity//build/sysroot/System//lib64
 
 
 #
 # headers, libraries and man pages installation paths
 #
-INCLUDE_DIR = /home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//include
-LIB_DIR = /home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//lib
-PKGCONF_DIR = /home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//lib/pkgconfig
-MAN3_DIR = /home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//share/man/man3
-MAN7_DIR = /home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//share/man/man7
+INCLUDE_DIR = /home/kc/Vintrixity/Vintrixity//build/sysroot/System//include
+LIB_DIR = /home/kc/Vintrixity/Vintrixity//build/sysroot/System//lib
+PKGCONF_DIR = /home/kc/Vintrixity/Vintrixity//build/sysroot/System//lib/pkgconfig
+MAN3_DIR = /home/kc/Vintrixity/Vintrixity//build/sysroot/System//share/man/man3
+MAN7_DIR = /home/kc/Vintrixity/Vintrixity//build/sysroot/System//share/man/man7
 
 # man3 and man7 pages
 MAN3 = \

@@ -11,16 +11,15 @@ DEFS = -DDEBUG -DSNDIO_USER=\"sndiod\" -DDEFAULT_BITS=16 -D_GNU_SOURCE -DHAVE_SO
 LDADD = -lsndio -lrt -lasound
 
 # variables defined on configure script command line (if any)
-CC=clang
-CFLAGS=-static -fPIE -pie -Wall
+CFLAGS=--sysroot=/home/kc/Vintrixity/Vintrixity//build/sysroot -I/home/kc/Vintrixity/Vintrixity//build/sysroot/usr/include -I/home/kc/Vintrixity/Vintrixity//build/kernel_headers/include -I/include -L/home/kc/Vintrixity/Vintrixity//build/sysroot/usr/lib -L/home/kc/Vintrixity/Vintrixity//build/sysroot/usr/lib64 -L/home/kc/Vintrixity/Vintrixity//build/sysroot/System//lib -L/home/kc/Vintrixity/Vintrixity//build/sysroot/System//lib64
 
 
 #
 # binaries, documentation, man pages and examples will be installed in
 # ${BIN_DIR}, ${MAN8_DIR}
 #
-BIN_DIR = /home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//sbin
-MAN8_DIR = /home/kc/Vintrixity/Vintrixity/src/../build/sysroot//System//share/man/man8
+BIN_DIR = /home/kc/Vintrixity/Vintrixity//build/sysroot/System//bin
+MAN8_DIR = /home/kc/Vintrixity/Vintrixity//build/sysroot/System//share/man/man8
 
 #
 # programs to build

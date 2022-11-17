@@ -1,4 +1,5 @@
 #!/sbin/sh
 
+psplash
 mkmodule-list /etc/modules
 modprobe

@@ -1,7 +1,7 @@
-override prefix := /home/kc/Vintrixity/Vintrixity/src/../../build/sysroot//System
+override prefix := /home/kc/Vintrixity/Vintrixity//build/sysroot/System
 override exec_prefix := ${prefix}
 
-override ACBINDIR := /home/kc/Vintrixity/Vintrixity/src/../../build/sysroot//System//sbin
+override ACBINDIR := ${exec_prefix}/bin
 override ACDATAROOTDIR := ${prefix}/share
 override ACINCLUDEDIR := ${prefix}/include
 
@@ -29,7 +29,7 @@ define DEFAULT_VAR =
 endef
 
 override BUILD_BIOS := 
-override BUILD_UEFI_X86_64 := limine-uefi-x86-64
+override BUILD_UEFI_X86_64 := 
 override BUILD_UEFI_IA32 := 
 override BUILD_UEFI_AARCH64 := 
 override BUILD_CD_EFI := no
@@ -40,7 +40,7 @@ override BUILD_LIMINE_DEPLOY := no
 override WERROR := 
 export WERROR
 
-$(eval $(call DEFAULT_VAR,CC,clang))
+$(eval $(call DEFAULT_VAR,CC,gcc))
 export CC
 
 override MKDIR_P := /sbin/mkdir -p
@@ -66,7 +66,7 @@ export AWK
 
 CPPFLAGS ?= 
 export CPPFLAGS
-CFLAGS ?= -static -fPIE -pie -Wall
+CFLAGS ?= --sysroot=/home/kc/Vintrixity/Vintrixity//build/sysroot
 export CFLAGS
 LDFLAGS ?= 
 export LDFLAGS
@@ -78,7 +78,7 @@ export CROSS_CFLAGS
 CROSS_LDFLAGS ?= 
 export CROSS_LDFLAGS
 
-override LIMINE_VERSION := e075240
+override LIMINE_VERSION := e9ab448
 
 override STAGE1_FILES := $(shell find '$(call SHESCAPE,$(SRCDIR))/stage1' -type f -name '*.asm')
 
@@ -95,7 +95,7 @@ $(call MKESCAPE,$(BINDIR))/limine-deploy: $(call MKESCAPE,$(BINDIR))/Makefile $(
 	$(MAKE) -C '$(call SHESCAPE,$(BINDIR))' limine-deploy
 
 $(call MKESCAPE,$(BINDIR))/limine-version: $(call MKESCAPE,$(BINDIR))/Makefile $(call MKESCAPE,$(SRCDIR))/host/limine-version.c
-	$(SED) 's/@LIMINE_VERSION@/e075240/g' <'$(call SHESCAPE,$(SRCDIR))/host/limine-version.c' >'$(call SHESCAPE,$(BINDIR))/limine-version.c'
+	$(SED) 's/@LIMINE_VERSION@/e9ab448/g' <'$(call SHESCAPE,$(SRCDIR))/host/limine-version.c' >'$(call SHESCAPE,$(BINDIR))/limine-version.c'
 	$(MAKE) -C '$(call SHESCAPE,$(BINDIR))' limine-version
 
 $(call MKESCAPE,$(BINDIR))/Makefile: $(call MKESCAPE,$(SRCDIR))/host/Makefile $(call MKESCAPE,$(SRCDIR))/host/.gitignore

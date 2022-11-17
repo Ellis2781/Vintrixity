@@ -1,0 +1,25 @@
+menu "Programs and Features"
+	comment "There is nothing here yet but this is where you will be able to configure your build"
+	menu "Essential"
+		menu "kernel"
+                endmenu
+		menu "hello-world"
+                endmenu
+		menu "limine"
+                endmenu  
+		menu "sndio"
+                endmenu  
+		menu "system"
+                endmenu
+		menu "system-utils"
+		endmenu
+        endmenu
+	menu "Experimental"		
+		config EXPERIMENTAL
+                	bool "Enable" 
+			default n
+        endmenu
+	config EXTERNAL
+		bool "External"
+		default n
+endmenu
