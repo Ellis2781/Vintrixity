@@ -1,2 +1,0 @@
-#!/bin/sh
-exec "${REALGCC:-gcc}" "$@" -specs "/home/kc/Vintrixity/Vintrixity/src/libs/libc/../build/sysroot//System//lib/musl-gcc.specs"
